@@ -14,11 +14,9 @@ public class AccessControl
         }
 
         if (role == "Student")
-        {
-            return section == "Tasks" || section == "Deadlines";
-        }
-
-        return false;
+            {
+                return false;   
+            }
     }
 }
     static void Main()
