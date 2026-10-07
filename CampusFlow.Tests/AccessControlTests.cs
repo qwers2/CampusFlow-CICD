@@ -1,5 +1,4 @@
 ﻿using CampusFlow;
-
 namespace CampusFlow.Tests;
 
 public class AccessControlTests
