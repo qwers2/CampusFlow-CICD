@@ -1,26 +1,26 @@
 ﻿using System;
 class Program
 {
-public class AccessControl
-{
-    public bool CanAccess(string role, string section)
+    public class AccessControl
     {
-        if (role == "Admin")
-            return true;
-
-        if (role == "Teacher")
+        public bool CanAccess(string role, string section)
         {
-            return section != "Users";
-        }
+            if (role == "Admin")
+                return true;
 
-        if (role == "Student")
+            if (role == "Teacher")
             {
-                return false;   
+                return section != "Users";
             }
-    }
-}
-    static void Main()
-    {
 
+            if (role == "Student")
+            {
+                return section == "Tasks" || section == "Deadlines";
+            }
+        }
+        static void Main()
+        {
+
+        }
     }
 }
