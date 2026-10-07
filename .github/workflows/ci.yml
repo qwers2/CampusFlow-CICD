@@ -26,3 +26,6 @@ jobs:
 
       - name: Test
         run: dotnet test --configuration Release --no-build
+     
+     - name: Publish
+       run: dotnet publish CampusFlow/CampusFlow.csproj -c Release -o publish

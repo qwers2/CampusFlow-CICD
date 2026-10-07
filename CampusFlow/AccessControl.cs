@@ -1,12 +1,21 @@
 ﻿using System;
+namespace CampusFlow;
 class Program
 {
+    static void Main()
+    {
+        {
+
+        }
+    }
     public class AccessControl
     {
         public bool CanAccess(string role, string section)
         {
             if (role == "Admin")
+            {
                 return true;
+            }
 
             if (role == "Teacher")
             {
@@ -17,10 +26,8 @@ class Program
             {
                 return section == "Tasks" || section == "Deadlines";
             }
-        }
-        static void Main()
-        {
 
+            return false;
         }
     }
 }
